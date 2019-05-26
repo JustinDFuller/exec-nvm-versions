@@ -1,12 +1,38 @@
 {
   "name": "exec-nvm-versions",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Execute a script with all available node versions that are installed with NVM.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier-standard '**/*.js'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "nvm",
+    "benchmark",
+    "node",
+    "cli",
+    "execute",
+    "version"
+  ],
+  "author": "Justin Fuller <justindanielfuller@gmail.com>",
+  "license": "MIT",
+  "bin": "bin/exec-nvm-versions.js",
+  "devDependencies": {
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier-standard": "^9.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "linters": {
+      "**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]     
+    }   
+  }
 }
