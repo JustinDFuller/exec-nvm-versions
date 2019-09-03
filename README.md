@@ -1,5 +1,7 @@
 # exec-nvm-versions
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JustinDFuller/exec-nvm-versions.svg)](https://greenkeeper.io/)
+
 Run a node.js script against all available node versions that are installed with NVM.
 
 ```
